@@ -14,12 +14,14 @@ main {
 	grid-template-columns: 20% 1fr;
 	grid-template-rows: 10% 1fr;
 	background-color: var(--mainColor);
-	/* gap: 3px; */
 }
 
 .header {
 	grid-column: 2/-1;
 	background-color: var(--headerColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 .sidebar {
 	grid-row: 1/-1;
@@ -41,7 +43,7 @@ main {
 	font-weight: bold;
 	color: var(--mainColor);
 }
-svg {
+.sidebarIcons {
 	color: var(--mainColor);
 }
 .listItem {
@@ -50,9 +52,97 @@ svg {
 	gap: 5px;
 }
 .listText {
+	padding-top: 0.2rem;
 	color: var(--mainColor);
 }
 .sidebarItems {
 	padding-left: 10%;
 	font-weight: bold;
+}
+a {
+	text-decoration: none;
+}
+.sidebarItems li:hover {
+	font-size: 1.2rem;
+	padding-left: 0.3rem;
+}
+
+.topHeader,
+.bottomHeader {
+	display: flex;
+	justify-content: space-between;
+}
+.leftCornerTopHeader {
+	display: flex;
+	align-items: center;
+	gap: 0.3rem;
+	margin-left: 2%;
+	width: 40%;
+}
+.leftCornerTopHeader input {
+	border-radius: 15px;
+	border: 1px solid var(--mainColor);
+	padding-left: 10px;
+	width: 100%;
+}
+.leftCornerTopHeader input:focus {
+	outline-width: 0px;
+	border: 1.5px solid rgb(252, 145, 23);
+}
+.rightCornerTopHeader {
+	display: flex;
+	align-items: center;
+	gap: 0.7rem;
+	margin-right: 2%;
+	width: 20%;
+}
+.rightCornerTopHeader .profilePicture {
+	border: 1px solid black;
+	border-radius: 30px;
+	padding: 2px;
+}
+.fullName {
+	font-weight: bold;
+}
+
+.leftCornerBottomHeader {
+	display: flex;
+	gap: 0.7rem;
+	margin-left: 2%;
+	align-items: center;
+}
+.leftCornerBottomHeader .profilePicture {
+	border: 1px solid black;
+	padding: 2px;
+	border-radius: 30px;
+}
+.leftCornerBottomHeader > span > h6 {
+	font-size: 15px;
+}
+.leftCornerBottomHeader > span > h1,
+.leftCornerBottomHeader > span > h6 {
+	font-weight: bold;
+}
+.rightCornerBottomHeader {
+	display: flex;
+	justify-content: end;
+	gap: 0.7rem;
+	width: 30%;
+	margin-right: 2%;
+}
+.rightCornerBottomHeader > button {
+	background-color: var(--mainColor);
+	border: 0px solid black;
+	color: var(--sidebarColor);
+	border-radius: 20px;
+	width: 4rem;
+	height: 2rem;
+	font-weight: bold;
+	font-size: 0.8rem;
+}
+.rightCornerBottomHeader > button:hover {
+	color: var(--mainColor);
+	background-color: var(--headerColor);
+	outline: 1px solid var(--mainColor);
+	font-size: 0.9rem;
 }

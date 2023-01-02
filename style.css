@@ -11,17 +11,20 @@ main {
 	min-width: 100vw;
 	min-height: 100vh;
 	display: grid;
-	grid-template-columns: 20% 1fr;
-	grid-template-rows: 10% 1fr;
+	grid-template: auto 4fr/ 1fr 4fr;
 	background-color: var(--mainColor);
 }
 
 .header {
 	grid-column: 2/-1;
 	background-color: var(--headerColor);
+	position: relative;
 	display: flex;
+	gap: 1rem;
 	flex-direction: column;
 	justify-content: space-around;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
 }
 .sidebar {
 	grid-row: 1/-1;
@@ -71,6 +74,7 @@ a {
 .bottomHeader {
 	display: flex;
 	justify-content: space-between;
+	height: 40%;
 }
 .leftCornerTopHeader {
 	display: flex;
@@ -104,6 +108,9 @@ a {
 	font-weight: bold;
 }
 
+/* .bottomHeader {
+	margin: 20px 20px 10px 30px;
+} */
 .leftCornerBottomHeader {
 	display: flex;
 	gap: 0.7rem;
@@ -135,7 +142,7 @@ a {
 	color: var(--sidebarColor);
 	border-radius: 20px;
 	width: 4rem;
-	height: 2rem;
+	height: 1.75rem;
 	font-weight: bold;
 	font-size: 0.8rem;
 }

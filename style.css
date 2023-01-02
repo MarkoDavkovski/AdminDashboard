@@ -93,8 +93,7 @@ a {
 	display: flex;
 	align-items: center;
 	gap: 0.7rem;
-	margin-right: 2%;
-	width: 20%;
+	margin-right: 4%;
 }
 .rightCornerTopHeader .profilePicture {
 	border: 1px solid black;

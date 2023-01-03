@@ -23,8 +23,8 @@ main {
 	gap: 1rem;
 	flex-direction: column;
 	justify-content: space-around;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
 }
 .sidebar {
 	grid-row: 1/-1;
@@ -151,4 +151,39 @@ a {
 	background-color: var(--headerColor);
 	outline: 1px solid var(--mainColor);
 	font-size: 0.9rem;
+}
+
+content {
+	display: grid;
+	grid-template-columns: 4fr 2fr;
+}
+.mainContent {
+	padding: 5%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: min-content 1fr 1fr 1fr;
+	gap: 1rem;
+}
+.mainContentTitle {
+	grid-column: 1/-1;
+}
+.sideContainerTitle,
+.mainContentTitle {
+	color: var(--headerColor);
+	font-weight: bold;
+	padding: 2%;
+}
+.sideContent {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content 1fr;
+	padding: 10%;
+	gap: 1rem;
+}
+.mainContentContainer,
+.sideContentContainer {
+	border: 2px solid var(--headerColor);
+	border-radius: 10px;
+}
+.sideContentContainer {
+	border: 2px solid var(--headerColor);
 }

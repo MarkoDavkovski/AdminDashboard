@@ -6,6 +6,9 @@ body {
 	--sidebarColor: #bae6fd;
 	--mainColor: #0c4a6e;
 	--headerColor: #93c5fd;
+	--containerColor: #0284c7;
+	--accentColor: #ff6e31;
+	--darkBlueColor: rgb(1, 11, 70);
 }
 main {
 	min-width: 100vw;
@@ -91,7 +94,7 @@ a {
 }
 .leftCornerTopHeader input:focus {
 	outline-width: 0px;
-	border: 1.5px solid rgb(252, 145, 23);
+	border: 1.5px solid var(--accentColor);
 }
 .rightCornerTopHeader {
 	display: flex;
@@ -166,12 +169,15 @@ content {
 }
 .mainContentTitle {
 	grid-column: 1/-1;
+	padding: 3%;
 }
 .sideContainerTitle,
 .mainContentTitle {
 	color: var(--headerColor);
 	font-weight: bold;
-	padding: 2%;
+}
+.sideContainerTitle {
+	padding: 5%;
 }
 .sideContent {
 	display: grid;
@@ -181,9 +187,102 @@ content {
 }
 .mainContentContainer,
 .sideContentContainer {
-	border: 2px solid var(--headerColor);
 	border-radius: 10px;
+
+	background-color: var(--containerColor);
+	padding: 7%;
+}
+.mainContentContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.projectContainer > a,
+.projectContainer > p {
+	text-decoration: none;
+}
+.projectContainer > a {
+	font-weight: bold;
+	color: var(--darkBlueColor);
+}
+
+.projectContainer > p {
+	color: var(--headerColor);
+	font-size: 0.9rem;
+	line-height: 1rem;
+	padding-top: 0.7rem;
+}
+.mainContentContainer {
+	background-image: -webkit-linear-gradient(
+		left,
+		#f09e07,
+		#f78f08 2%,
+		transparent 2%,
+		transparent 100%
+	);
+}
+.projectContainerIcons {
+	display: flex;
+	justify-content: end;
+}
+
+.svgbtn {
+	background-color: transparent;
+	border: none;
+	border-radius: 50px;
+}
+.svgbtn:hover {
+	background-color: #f09e07;
+}
+.lineBetween {
+	text-align: center;
+	width: 100%;
+	height: 2px;
+	background-color: black;
 }
 .sideContentContainer {
-	border: 2px solid var(--headerColor);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.sideContentContainer > article > a {
+	font-size: 0.85rem;
+	color: var(--darkBlueColor);
+	font-weight: bold;
+}
+.sideContentContainer > article > a:hover,
+.projectContainer > a:hover,
+.otherUserTagName > a:hover {
+	text-decoration: underline;
+}
+.sideContentContainer > article > p {
+	font-size: 0.7rem;
+	color: var(--headerColor);
+	padding-top: 10px;
+}
+.otherUserInfo {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 0.3rem;
+}
+.otherUserProfile > img {
+	border-radius: 30px;
+}
+.otherUserProfile {
+	display: flex;
+	gap: 10px;
+}
+.otherUserTagName {
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+.otherUserTagName > a {
+	color: var(--darkBlueColor);
+}
+.otherUserDescription {
+	font-size: 0.7rem;
+	color: var(--headerColor);
 }

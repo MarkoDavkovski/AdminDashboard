@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+
+	--sidebarColor: #bae6fd;
+	--mainColor: #0c4a6e;
+	--headerColor: #93c5fd;
+	--containerColor: #0284c7;
+	--accentColor: #ff6e31;
+	--darkBlueColor: rgb(1, 11, 70);
+}
+
+.content > .title {
+	color: var(--accentColor);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	font-size: 1.5rem;
+	font-weight: 700;
+	letter-spacing: 5px;
+}
+.bookCardsCoontainer {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	border: 2px solid red;
+}
+.bookCard {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3rem;
+	border: 2px solid blue;
+}

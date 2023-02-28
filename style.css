@@ -1,306 +1,319 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
 body {
-	font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 
-	--sidebarColor: #bae6fd;
-	--mainColor: #0c4a6e;
-	--headerColor: #93c5fd;
-	--containerColor: #0284c7;
-	--accentColor: #ff6e31;
-	--darkBlueColor: rgb(1, 11, 70);
+  --sidebarColor: #bae6fd;
+  --mainColor: #0c4a6e;
+  --headerColor: #93c5fd;
+  --containerColor: #0284c7;
+  --accentColor: #ff6e31;
+  --darkBlueColor: rgb(1, 11, 70);
 }
 main {
-	min-width: 100vw;
-	min-height: 100vh;
-	display: grid;
-	grid-template: auto 4fr 0.1fr/ 1fr 4fr;
-	background-color: var(--mainColor);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template: auto 4fr 0.1fr/ 1fr 4fr;
+  background-color: var(--mainColor);
 }
 
 /* Header */
 .header {
-	grid-column: 2/-1;
-	background-color: var(--headerColor);
-	position: relative;
-	display: flex;
-	gap: 1rem;
-	flex-direction: column;
-	justify-content: space-around;
-	padding-bottom: 1rem;
-	padding-top: 1rem;
+  grid-column: 2/-1;
+  background-color: var(--headerColor);
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .topHeader,
 .bottomHeader {
-	display: flex;
-	justify-content: space-between;
-	height: 40%;
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
 }
 .leftCornerTopHeader {
-	display: flex;
-	align-items: center;
-	gap: 0.3rem;
-	margin-left: 2%;
-	width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-left: 2%;
+  width: 40%;
 }
 .leftCornerTopHeader input {
-	border-radius: 15px;
-	border: 1px solid var(--mainColor);
-	padding-left: 10px;
-	width: 100%;
+  border-radius: 15px;
+  border: 1px solid var(--mainColor);
+  padding-left: 10px;
+  width: 100%;
 }
 .leftCornerTopHeader input:focus {
-	outline-width: 0px;
-	border: 1.5px solid var(--accentColor);
+  outline-width: 0px;
+  border: 1.5px solid var(--accentColor);
 }
 .rightCornerTopHeader {
-	display: flex;
-	align-items: center;
-	gap: 0.7rem;
-	margin-right: 4%;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-right: 4%;
 }
 .rightCornerTopHeader .profilePicture {
-	border: 1px solid black;
-	border-radius: 30px;
-	padding: 2px;
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 2px;
 }
 .fullName {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .leftCornerBottomHeader {
-	display: flex;
-	gap: 0.7rem;
-	margin-left: 2%;
-	align-items: center;
+  display: flex;
+  gap: 0.7rem;
+  margin-left: 2%;
+  align-items: center;
 }
 .leftCornerBottomHeader .profilePicture {
-	border: 1px solid black;
-	padding: 2px;
-	border-radius: 30px;
+  border: 1px solid black;
+  padding: 2px;
+  border-radius: 30px;
 }
 .leftCornerBottomHeader > span > h6 {
-	font-size: 15px;
+  font-size: 15px;
 }
 .leftCornerBottomHeader > span > h1,
 .leftCornerBottomHeader > span > h6 {
-	font-weight: bold;
+  font-weight: bold;
 }
 .rightCornerBottomHeader {
-	display: flex;
-	justify-content: end;
-	gap: 0.7rem;
-	width: 30%;
-	margin-right: 2%;
+  display: flex;
+  justify-content: end;
+  gap: 0.7rem;
+  width: 30%;
+  margin-right: 2%;
 }
-.rightCornerBottomHeader > button {
-	background-color: var(--mainColor);
-	border: 0px solid black;
-	color: var(--sidebarColor);
-	border-radius: 20px;
-	width: 4rem;
-	height: 1.75rem;
-	font-weight: bold;
-	font-size: 0.8rem;
+.rightCornerBottomHeader > button,
+.btn {
+  background-color: var(--mainColor);
+  border: 0px solid black;
+  color: var(--sidebarColor);
+  border-radius: 20px;
+  width: 4rem;
+  height: 1.75rem;
+  font-weight: bold;
+  font-size: 0.8rem;
 }
 .rightCornerBottomHeader > button:hover {
-	color: var(--mainColor);
-	background-color: var(--headerColor);
-	outline: 1px solid var(--mainColor);
-	font-size: 0.9rem;
+  color: var(--mainColor);
+  background-color: var(--headerColor);
+  outline: 1px solid var(--mainColor);
+  font-size: 0.9rem;
+  cursor: pointer;
 }
 
 /* Sidebar */
 .sidebar {
-	grid-row: 1/5;
-	background-color: var(--sidebarColor);
-	display: flex;
-	flex-direction: column;
-	gap: 5%;
+  grid-row: 1/5;
+  background-color: var(--sidebarColor);
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  overflow: hidden;
 }
 
 .logo {
-	padding-top: 5%;
-	display: flex;
-	gap: 0.5rem;
-	justify-content: center;
-	align-items: center;
+  padding-top: 5%;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
 }
 .textLogo {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: var(--mainColor);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--mainColor);
 }
 .sidebarIcons {
-	color: var(--mainColor);
+  color: var(--mainColor);
 }
 .listItem {
-	display: flex;
-	padding-bottom: 10px;
-	gap: 5px;
+  display: flex;
+  padding-bottom: 10px;
+  gap: 5px;
 }
 .listText {
-	padding-top: 0.2rem;
-	color: var(--mainColor);
+  padding-top: 0.2rem;
+  color: var(--mainColor);
 }
 .sidebarItems {
-	padding-left: 10%;
-	font-weight: bold;
+  padding-left: 10%;
+  font-weight: bold;
 }
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 .sidebarItems li:hover {
-	font-size: 1.2rem;
-	padding-left: 0.3rem;
+  font-size: 1.2rem;
+  padding-left: 0.3rem;
 }
 
 /* Main and Side content */
 content {
-	display: grid;
-	grid-template-columns: 4fr 2fr;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
 }
 .mainContent {
-	padding: 5%;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	grid-template-rows: min-content 1fr 1fr 1fr;
-	gap: 1rem;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: min-content 1fr 1fr 1fr;
+  gap: 1rem;
 }
 .mainContentTitle {
-	grid-column: 1/-1;
-	padding: 3%;
+  grid-column: 1/-1;
+  padding: 3%;
 }
 .sideContainerTitle,
 .mainContentTitle {
-	color: var(--accentColor);
-	font-weight: bold;
+  color: var(--accentColor);
+  font-weight: bold;
 }
 .sideContainerTitle {
-	padding: 5%;
+  padding: 5%;
 }
 .sideContent {
-	display: grid;
-	grid-template-rows: min-content 1fr min-content 1fr;
-	padding: 10%;
-	gap: 1rem;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content 1fr;
+  padding: 10%;
+  gap: 1rem;
 }
 .mainContentContainer,
 .sideContentContainer {
-	border-radius: 10px;
+  border-radius: 10px;
 
-	background-color: var(--containerColor);
-	padding: 7%;
+  background-color: var(--containerColor);
+  padding: 7%;
 }
 .mainContentContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .projectContainer > a,
 .projectContainer > p {
-	text-decoration: none;
+  text-decoration: none;
 }
 .projectContainer > a {
-	font-weight: bold;
-	color: var(--darkBlueColor);
+  font-weight: bold;
+  color: var(--darkBlueColor);
 }
 
 .projectContainer > p {
-	color: var(--headerColor);
-	font-size: 0.9rem;
-	line-height: 1rem;
-	padding-top: 0.7rem;
+  color: var(--headerColor);
+  font-size: 0.9rem;
+  line-height: 1rem;
+  padding-top: 0.7rem;
 }
 .mainContentContainer {
-	background-image: -webkit-linear-gradient(
-		left,
-		#f09e07,
-		#f78f08 2%,
-		transparent 2%,
-		transparent 100%
-	);
+  background-image: -webkit-linear-gradient(
+    left,
+    #f09e07,
+    #f78f08 2%,
+    transparent 2%,
+    transparent 100%
+  );
 }
 .projectContainerIcons {
-	display: flex;
-	justify-content: end;
+  display: flex;
+  justify-content: end;
 }
 
 .svgbtn {
-	background-color: transparent;
-	border: none;
-	border-radius: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50px;
 }
 .svgbtn:hover {
-	background-color: #f09e07;
+  background-color: #f09e07;
 }
 .lineBetween {
-	text-align: center;
-	width: 100%;
-	height: 2px;
-	background-color: black;
+  text-align: center;
+  width: 100%;
+  height: 2px;
+  background-color: black;
 }
 .sideContentContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .sideContentContainer > article > a {
-	font-size: 0.85rem;
-	color: var(--darkBlueColor);
-	font-weight: bold;
+  font-size: 0.85rem;
+  color: var(--darkBlueColor);
+  font-weight: bold;
 }
 .sideContentContainer > article > a:hover,
 .projectContainer > a:hover,
 .otherUserTagName > a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 .sideContentContainer > article > p {
-	font-size: 0.7rem;
-	color: var(--headerColor);
-	padding-top: 10px;
+  font-size: 0.7rem;
+  color: var(--headerColor);
+  padding-top: 10px;
 }
 .otherUserInfo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	gap: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.3rem;
 }
 .otherUserProfile > img {
-	border-radius: 30px;
+  border-radius: 30px;
 }
 .otherUserProfile {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 .otherUserTagName {
-	font-size: 0.8rem;
-	font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 .otherUserTagName > a {
-	color: var(--darkBlueColor);
+  color: var(--darkBlueColor);
 }
 .otherUserDescription {
-	font-size: 0.7rem;
-	color: var(--headerColor);
+  font-size: 0.7rem;
+  color: var(--headerColor);
 }
 
 /* Footer */
 footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: var(--headerColor);
-	font-size: 0.8rem;
-	padding: 5px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--headerColor);
+  font-size: 0.8rem;
+  padding: 5px 0px;
 }
 footer > span > a {
-	font-weight: bold;
-	color: var(--accentColor);
+  font-weight: bold;
+  color: var(--accentColor);
 }
 footer > span > a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
+}
+.form-add-button {
+  color: #fefefe;
+}
+.form-add-button:hover {
+  cursor: pointer;
+  background-color: var(--containerColor);
 }

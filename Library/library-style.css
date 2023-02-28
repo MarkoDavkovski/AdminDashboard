@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway &display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
 
 body {
 	font-family: 'Raleway', sans-serif;
@@ -11,6 +12,9 @@ body {
 	--darkBlueColor: rgb(1, 11, 70);
 }
 
+.content {
+	padding: 2%;
+}
 .content > .title {
 	color: var(--accentColor);
 	display: flex;
@@ -22,14 +26,187 @@ body {
 	font-weight: 700;
 	letter-spacing: 5px;
 }
-.bookCardsCoontainer {
+.books {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	border: 2px solid red;
+	grid-template-columns: repeat(auto-fit, 250px);
+	grid-gap: 1rem;
 }
-.bookCard {
+
+.card.book {
+	background-color: var(--containerColor);
+	color: var(--mainColor);
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	padding: 30px 20px 10px 20px;
+	display: grid;
+	row-gap: 1rem;
+	align-items: center;
+	justify-items: center;
+	position: relative;
+	letter-spacing: 2px;
+}
+h1.book-title {
+	font-size: 1.5rem;
+}
+.book-read {
 	display: flex;
+	gap: 10px;
+}
+.read-unchecked {
+	border: 2px solid rgb(226, 56, 56);
+}
+.read-checked {
+	border: 2px solid rgb(73, 226, 56);
+}
+.delete-button {
+	font-family: 'Solitreo', cursive;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: var(--containerColor);
+	border: 0px solid red;
+	color: var(--mainColor);
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+.delete-button:hover {
+	cursor: pointer;
+	color: var(--accentColor);
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 30vh;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+	background-color: #fefefe;
+	display: flex;
+	flex-direction: row-reverse;
+	margin: auto;
+	padding: 5px 5px 5px 20px;
+	border: 1px solid #888;
+	width: 400px;
+	border-radius: 10px;
+}
+.close {
+	color: #aaaaaa;
+	font-size: 28px;
+	font-weight: bold;
+	padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-form {
+	display: flex;
+	width: 100%;
+	justify-content: center;
 	flex-direction: column;
-	gap: 0.3rem;
-	border: 2px solid blue;
+	gap: 10px;
+}
+
+.form-title {
+	font-size: xx-large;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.modal-form {
+	margin-right: auto;
+	padding-top: 5px;
+}
+.modal-form-input {
+	border: 0;
+	margin-left: 10px;
+	margin-right: 20%;
+	background-color: rgba(44, 66, 164, 0.198);
+	padding: 0.5rem 1.5rem;
+	outline-color: var(--blue-1);
+	border-radius: 5px;
+}
+.modal-input-field {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding-bottom: 20px;
+}
+.container {
+	position: relative;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.checkmark {
+	position: absolute;
+	top: -2px;
+	left: 8px;
+	height: 20px;
+	width: 20px;
+	background-color: rgba(44, 66, 164, 0.198);
+}
+
+.container:hover input ~ .checkmark {
+	background-color: var(--drawer-color);
+}
+
+.container input:checked ~ .checkmark {
+	background-color: var(--blue-1);
+}
+
+.checkmark:after {
+	content: '';
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+.container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.modal-read {
+	padding-top: 10px;
+}
+.submit-modal-form {
+	display: flex;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+.form-add-button {
+	color: #fefefe;
+}
+button.add-book:hover {
+	width: 150px;
 }

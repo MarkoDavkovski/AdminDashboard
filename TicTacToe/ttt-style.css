@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway &display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap');
+
+body {
+	font-family: 'Raleway', sans-serif;
+
+	--sidebarColor: #bae6fd;
+	--mainColor: #0c4a6e;
+	--headerColor: #93c5fd;
+	--containerColor: #0284c7;
+	--accentColor: #ff6e31;
+	--darkBlueColor: rgb(1, 11, 70);
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 25px;
+}
+.game-name {
+	font-weight: 900;
+	font-size: 3.5rem;
+	color: var(--containerColor);
+	text-shadow: -2px 0px 0px var(--accentColor), 2px 0px 0px var(--accentColor),
+		0px -2px 0px var(--accentColor), 0px 2px 0px var(--accentColor);
+	letter-spacing: 5px;
+}
+.game-container {
+	/* display: grid */
+	display: none;
+	grid-template-columns: repeat(3, 150px);
+	grid-template-rows: repeat(3, 150px);
+	gap: 5px;
+}
+
+.human-btn:hover {
+	color: green;
+	cursor: pointer;
+	transition: 0.2s;
+	transform: scale(1.2);
+}
+.human-btn,
+.pc-ai-btn {
+	width: 10rem;
+	border: 2px solid var(--accentColor);
+}
+.pc-ai-btn:hover {
+	color: red;
+	cursor: pointer;
+	transition: 0.2s;
+	transform: scale(1.2);
+}
+.enemy-text {
+	display: none;
+}
+
+.start-btn,
+.human-btn,
+.pc-ai-btn {
+	border: 0px solid white;
+	color: var(--headerColor);
+	font-size: 1rem;
+	font-weight: 900;
+	background-color: var(--mainColor);
+	transition: opacity 0.5s ease-in-out;
+}
+.start-btn:hover,
+button.reset-btn:hover {
+	color: var(--accentColor);
+	cursor: pointer;
+	transition: 0.2s;
+	transform: scale(1.2);
+}
+
+.enemy-text {
+	color: var(--containerColor);
+	font-size: 1.2rem;
+	/* display: none; */
+}
+.enemy-selection {
+	width: 450px;
+	/* display: flex; */
+	display: none;
+	justify-content: space-around;
+}
+.pc-ai-selection > label {
+	color: var(--containerColor);
+	display: none;
+}
+
+.player-input {
+	/* display: flex; */
+	display: none;
+	flex-direction: column;
+	gap: 7px;
+	transition: transform 0.5s ease-in-out;
+}
+.player-input > label {
+	text-align: center;
+}
+label[for='player1'],
+#player1,
+#player1-name {
+	color: green;
+}
+
+label[for='player2'],
+#player2,
+#player2-name {
+	color: red;
+}
+#player1-name,
+#player2-name {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+.player-input label:nth-of-type(2) {
+	padding-top: 10px;
+}
+.player-input > input {
+	border-radius: 7px;
+	border: 0px solid white;
+	padding-left: 7px;
+	background-color: var(--headerColor);
+	opacity: 50%;
+
+	width: 200px;
+}
+.player-input > input:focus {
+	opacity: 100%;
+	outline: none;
+}
+.submit-btn {
+	background-color: var(--mainColor);
+	border: 0px solid white;
+	font-size: 1.1rem;
+	color: var(--headerColor);
+	font-weight: bold;
+	transition: transform 0.3s ease-in-out;
+	width: fit-content;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.res-btn-container {
+	display: flex;
+	width: 450px;
+}
+button.reset-btn {
+	background-color: var(--mainColor);
+	border: 0px solid white;
+	color: var(--headerColor);
+	font-weight: bold;
+	width: min-content;
+	transition: transform 0.3s ease-in-out;
+	margin-left: auto;
+	display: none;
+}
+
+.submit-btn:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+	color: var(--sidebarColor);
+}
+
+.player-name-container {
+	width: 450px;
+	/* display: flex; */
+	display: none;
+	justify-content: space-around;
+}
+
+.cell-btn {
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: var(--accentColor);
+	text-shadow: -3px 0px 0px var(--mainColor), 3px 0px 0px var(--mainColor),
+		0px -3px 0px var(--mainColor), 0px 3px 0px var(--mainColor);
+	background-color: var(--containerColor);
+	border: 0px solid white;
+	border-radius: 5px;
+	font-size: 4rem;
+	text-align: center;
+	padding: 1rem;
+}
+.cell-btn:hover {
+	background-color: var(--headerColor);
+	cursor: pointer;
+}

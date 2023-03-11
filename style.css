@@ -290,9 +290,11 @@ content {
 }
 .other-user-tag-name > a {
 	color: var(--darkBlueColor);
+	font-size: 0.9rem;
+	font-weight: 900;
 }
-.other-user-desctiption {
-	font-size: 0.7rem;
+.other-user-description {
+	font-size: 0.75rem;
 	color: var(--headerColor);
 }
 
@@ -311,6 +313,7 @@ footer > span > a {
 }
 footer > span > a:hover {
 	text-decoration: underline;
+	color: var(--containerColor);
 }
 .form-add-button {
 	color: #fefefe;
@@ -318,4 +321,15 @@ footer > span > a:hover {
 .form-add-button:hover {
 	cursor: pointer;
 	background-color: var(--containerColor);
+}
+
+.fa-github {
+	font-size: 1.1rem;
+	transition: transform 0.4s ease-in-out;
+}
+
+footer > span > a:hover .fa-github {
+	cursor: pointer;
+	transform: rotate(360deg) scale(1.2);
+	color: var(--containerColor);
 }

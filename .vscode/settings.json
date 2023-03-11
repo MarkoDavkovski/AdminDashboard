@@ -1,4 +1,5 @@
 {
 	"diffEditor.codeLens": true,
-	"cSpell.words": ["Davko"]
+	"cSpell.words": ["Darko", "Davko", "svgbtn"],
+	"cSpell.enabled": false
 }

@@ -1,5 +1,6 @@
 {
 	"diffEditor.codeLens": true,
 	"cSpell.words": ["Darko", "Davko", "svgbtn"],
-	"cSpell.enabled": false
+	"cSpell.enabled": false,
+	"liveServer.settings.port": 5501
 }

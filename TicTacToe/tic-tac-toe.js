@@ -121,10 +121,16 @@
 			Gameboard.update(id, players[currPlayerID].symbol);
 
 			if (checkForWin(Gameboard.getGameboard())) {
-				alert(`${players[currPlayerID].name} won!`);
+				setTimeout(function () {
+					alert(`${players[currPlayerID].name} won!`);
+				}, 100);
+				return;
 			} else if (checkForTie(Gameboard.getGameboard())) {
-				alert("It's a tie!");
+				setTimeout(function () {
+					alert("It's a tie!");
+				}, 100);
 				gameOver = true;
+				return;
 			}
 			currPlayerID = (currPlayerID + 1) % players.length;
 		};

@@ -27,6 +27,7 @@
 		secondPlayerName.innerHTML = '';
 		playerInput.style.display = 'none';
 		resetBtn.style.display = 'none';
+		Gameboard.reset();
 	});
 	humanBtn.addEventListener('click', () => {
 		aiBtn.style.display = 'none';

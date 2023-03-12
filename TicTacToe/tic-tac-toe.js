@@ -14,6 +14,8 @@
 	const playerInput = document.querySelector('.player-input');
 	const playerNameContainer = document.querySelector('.player-name-container');
 
+	let gameOver;
+
 	startBtn.addEventListener('click', () => {
 		startBtn.style.display = 'none';
 		enemyTxt.style.display = 'block';
@@ -56,6 +58,7 @@
 		};
 
 		const reset = () => {
+			gameOver = false;
 			gameboard = [null, null, null, null, null, null, null, null, null];
 		};
 
@@ -100,7 +103,7 @@
 	const Game = (() => {
 		let players = [];
 		let currPlayerID;
-		let gameOver;
+
 		const start = () => {
 			players = [
 				createPlayer(document.querySelector('#player1').value, 'X'),

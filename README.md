@@ -3,4 +3,5 @@ Admin Dashboard project from The Odin Project : https://www.theodinproject.com/l
 
 This is my first project build with grid layout.
 In cards there are link to the other projects that I've build learning through the curriculum of The Odin Project.
-https://markodavkovski.github.io/AdminDashboard/
+
+Live preview : https://markodavkovski.github.io/AdminDashboard/
